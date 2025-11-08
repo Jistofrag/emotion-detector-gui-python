@@ -9,7 +9,7 @@ class EmotionApp(ctk.CTk):
         super().__init__()
         self.title("🧠 Edgy Emotion Detector 🦾")
         self.geometry("900x700")
-        self.resizable(False, False)
+        self.resizable(True, True)
 
         # Stunning title
         ctk.CTkLabel(
@@ -91,4 +91,5 @@ class EmotionApp(ctk.CTk):
 if __name__ == "__main__":
     app = EmotionApp()
     app.mainloop()
+
 
