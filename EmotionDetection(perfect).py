@@ -11,7 +11,7 @@ class EmotionApp(ctk.CTk):
         self.geometry("900x700")
         self.resizable(True, True)
 
-        # Stunning title
+        # Title
         ctk.CTkLabel(
             self, text="Type a message for instant emotion ➡️", font=("Montserrat", 18, "bold"), text_color="#39FF14"
         ).pack(pady=(22,10))
@@ -34,7 +34,7 @@ class EmotionApp(ctk.CTk):
         self.compound_lbl = ctk.CTkLabel(self, text="", font=("Montserrat", 18, "bold"))
         self.compound_lbl.pack(pady=(18,6))
 
-        # Edgy history panel!
+        # History panel
         ctk.CTkLabel(self, text="🕑 History Panel", font=("Montserrat", 13, "italic"), text_color="#b4ffd1").pack(pady=(16,2))
         self.history_box = ctk.CTkTextbox(self, width=340, height=120, font=("Fira Mono", 12))
         self.history_box.pack()
@@ -54,7 +54,7 @@ class EmotionApp(ctk.CTk):
         self.neu_lbl.configure(text=f"😐 Neutral: {scores['neu']*100:.1f}%")
         self.pos_lbl.configure(text=f"😄 Positive: {scores['pos']*100:.1f}%")
 
-        # Overall with emoji and fancy display
+        # Overall with emoji and display
         if scores['compound'] >= 0.05:
             mood = "POSITIVE 🟢"
             deco = "💚 😄 🚀"
@@ -91,5 +91,6 @@ class EmotionApp(ctk.CTk):
 if __name__ == "__main__":
     app = EmotionApp()
     app.mainloop()
+
 
 
